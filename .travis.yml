@@ -4,3 +4,6 @@ services:
   
 before_install:
   - docker build -t isachinbankar/dcker-reat -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true USERNAME/docker-react npm run test
