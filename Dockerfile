@@ -22,4 +22,4 @@ FROM nginx
 EXPOSE 80
 # copy only build folder which we required to nginx.
 # To run production application we dont need other folders
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=builder /app/build /usr/share/nginx/html 
