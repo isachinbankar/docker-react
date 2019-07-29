@@ -4,7 +4,7 @@ FROM node:alpine as builder
 WORKDIR "/app"
 # copy only package.json, because we need only package.json
 # for npm install
-COPY package.json .
+COPY package*.json ./
 # installing dependencies
 RUN npm install
 # copy remaining files. Source Code files.
