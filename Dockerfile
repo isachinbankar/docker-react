@@ -18,6 +18,8 @@ RUN npm build
 
 # nginx is used for production server
 FROM nginx
+#Map port 80 to 80
+EXPOSE 80
 # copy only build folder which we required to nginx.
 # To run production application we dont need other folders
 COPY --from=builder /app/build /usr/share/nginx/html
