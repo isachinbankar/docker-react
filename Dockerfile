@@ -14,7 +14,7 @@ RUN npm install
 # rebuild will start from below steps
 COPY . .
 # build production image
-RUN npm build
+RUN npm run build
 
 # nginx is used for production server
 FROM nginx
